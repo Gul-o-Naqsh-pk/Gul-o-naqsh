@@ -1,0 +1,174 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+
+body{
+    background:lch(99.46% 0.7 18.51);
+    color:#333;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+header{
+    background:rgb(240, 240, 240);
+    box-shadow:0 3px 10px rgba(0, 0, 0, 0.1);
+    position:sticky;
+    top:0;
+}
+
+header .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 0;
+}
+
+nav a{
+    text-decoration:none;
+    color:#0a0a0a;
+    margin-left:25px;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:#020202;
+}
+
+.hero{
+    height:90vh;
+    background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0ppjJsenxaRtE5xDOXNT_mAJJt1j1L_SmKzOyKLd6NA&s=10);
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-content{
+    color:white;
+}
+
+.hero h2{
+    font-size:55px;
+}
+
+.hero p{
+    margin:20px 0;
+    font-size:20px;
+}
+
+.btn{
+    display:inline-block;
+    background:#d63384;
+    color:white;
+    padding:14px 35px;
+    border-radius:30px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#f7f7f7;
+}
+
+.about,
+.collection,
+.contact{
+    padding:80px 0;
+    text-align:center;
+}
+
+.cards{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+}
+
+.card h3{
+    margin:15px;
+}
+
+.card p{
+    margin:15px;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+.social-links {
+display: flex;
+justify-content: center;
+gap: 15px;
+flex-wrap: wrap;
+}
+
+.social-links a {
+display: inline-block;
+padding: 14px 24px;
+color: white;
+text-decoration: none;
+border-radius: 8px;
+font-weight: bold;
+}
+
+.instagram-btn {
+background: #c13584;
+}
+
+.facebook-btn {
+background: #1877f2;
+}
+
+.tiktok-btn {
+background: #111111;
+}
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+
