@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Login - Gul o Naqsh</title>
+  <style>
+    body { font-family: 'Segoe UI', Arial; background: linear-gradient(135deg, #E1306C, #C13584); display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+   .login-box { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); width: 350px; text-align: center; }
+    h2 { color: #E1306C; margin-bottom: 25px; }
+    input { width: 90%; padding: 12px; margin: 10px 0; border: 2px solid #eee; border-radius: 10px; font-size: 15px; }
+    input:focus { border-color: #E1306C; outline: none; }
+    button { width: 95%; padding: 14px; background: #E1306C; color: white; border: none; border-radius: 10px; font-weight: bold; font-size: 16px; cursor: pointer; margin-top: 10px; }
+    button:hover { background: #C13584; }
+    #error { color: red; margin-top: 15px; font-size: 14px; }
+  </style>
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+</head>
+<body>
+  <div class="login-box">
+    <h2>🌸 Admin Panel Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p id="error"></p>
+  </div>
+
+<script>
+// Firebase Config
+const firebaseConfig = {
+  apiKey: "AIzaSyDTiX_ZTPF4HXWylHl0x-gaqIFvsZsjWus",
+  authDomain: "gul-o-naqsh-web-site.firebaseapp.com",
+  projectId: "gul-o-naqsh-web-site",
+  storageBucket: "gul-o-naqsh-web-site.firebasestorage.app",
+  messagingSenderId: "1000519402579",
+  appId: "1:1000519402579:web:1eddf2a43409411d9572a6",
+  measurementId: "G-WGTMJ0V46B"
+};
+
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+
+async function login() {
+  let user = document.getElementById("username").value;
+  let pass = document.getElementById("password").value;
+  document.getElementById("error").innerText = "";
+  
+  if(user == "" || pass == "") {
+    document.getElementById("error").innerText = "Dono fields bharna zaroori hai!";
+    return;
+  }
+  
+  const snapshot = await db.collection("admin").where("username", "==", user).get();
+  
+  if(!snapshot.empty) {
+    let data = snapshot.docs[0].data();
+    if(data.password == pass) {
+      alert("Login Success! ✅");
+      window.location.href = "dashboard.html"; // Yahan dashboard ka naam likhna
+    } else {
+      document.getElementById("error").innerText = "Password ghalat hai!";
+    }
+  } else {
+    document.getElementById("error").innerText = "Username nahi mila!";
+  }
+}
+</script>
+</body>
+</html>
