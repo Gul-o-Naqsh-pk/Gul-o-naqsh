@@ -250,6 +250,11 @@ flex-wrap: wrap;
   .social {
     min-width: 240px;
   }
+    <div class="social-buttons">
+  <a href="#" class="social instagram">Instagram</a>
+  <a href="#" class="social facebook">Facebook</a>
+  <a href="#" class="social tiktok">TikTok</a>
+</div>
 
   .brush,
   .flower {
