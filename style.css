@@ -307,8 +307,13 @@ flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-.social-btn {
-  background: #E1306C; /* Pink background for all 3 */
+.social-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
   color: white;
   text-decoration: none;
   padding: 12px 22px;
@@ -321,11 +326,24 @@ flex-wrap: wrap;
   transition: 0.3s;
 }
 
-.social-btn:hover {
+.btn:hover {
   opacity: 0.9;
   transform: translateY(-2px);
 }
 
-.social-btn i {
+.btn i {
   font-size: 18px;
+}
+
+/* Har button ka alag color */
+.insta-btn {
+  background: #E1306C; /* Instagram Pink */
+}
+
+.fb-btn {
+  background: #1877F2; /* Facebook Blue */
+}
+
+.tt-btn {
+  background: #000000; /* TikTok Black */
 }
