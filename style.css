@@ -207,8 +207,12 @@ flex-wrap: wrap;
   transform: translateY(-6px);
 }
 
-.instagram {
-  background: linear-gradient(90deg, #ff9d29, #d62976);
+.btn.instagram {
+  background: #E1306C; /* Instagram pink */
+  padding: 12px 15px;
+  border-radius: 50%; /* gol button */
+  font-size: 20px;
+  color: white;
 }
 
 .facebook {
