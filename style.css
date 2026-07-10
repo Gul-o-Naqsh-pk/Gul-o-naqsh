@@ -301,3 +301,31 @@ flex-wrap: wrap;
     opacity: 0.2;
   }
 }
+.social-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  background: #E1306C; /* Pink background for all 3 */
+  color: white;
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 50px; /* Gol button */
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.social-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.social-btn i {
+  font-size: 18px;
+}
