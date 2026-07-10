@@ -18,8 +18,8 @@ console.log("Welcome to Gul-o-Nasque!");
 function adminLogin(event) {
   event.preventDefault();
 
-  const username = document.getElementById("username").value;
-  const password = document.getElementById("password").value;
+  const username = document.getElementById("admin").value;
+  const password = document.getElementById("12345").value;
 
   if (username === "admin" && password === "12345") {
     localStorage.setItem("adminLoggedIn", "true");
