@@ -131,44 +131,128 @@ display: flex;
 justify-content: center;
 gap: 15px;
 flex-wrap: wrap;
+.follow-section {
+  min-height: 430px;
+  background: #fffaf5;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  text-align: center;
 }
 
-.social-links a {
-display: inline-block;
-padding: 14px 24px;
-color: white;
-text-decoration: none;
-border-radius: 8px;
-font-weight: bold;
+.follow-content {
+  position: relative;
+  z-index: 2;
 }
 
-.instagram-btn {
-background: #c13584;
+.small-line {
+  color: #b58a4a;
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
 }
 
-.facebook-btn {
-background: #1877f2;
+.follow-content h2 {
+  font-family: Georgia, serif;
+  color: #4b2d2d;
+  font-size: 52px;
+  margin: 0 0 15px;
+  font-weight: 500;
 }
 
-.tiktok-btn {
-background: #111111;
-}
-@media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav a {
-        margin: 0 10px;
-    }
-
-    .hero h2 {
-        font-size: 32px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
+.follow-content p {
+  font-size: 20px;
+  color: #463d3d;
+  margin-bottom: 18px;
 }
 
+.heart-line {
+  color: #c64c72;
+  font-size: 18px;
+  margin-bottom: 35px;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.social {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 17px 34px;
+  border-radius: 50px;
+  min-width: 190px;
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.16);
+  transition: 0.3s;
+}
+
+.social span {
+  background: white;
+  color: #333;
+  border-radius: 50%;
+  padding: 6px 11px;
+  margin-right: 12px;
+  font-size: 24px;
+}
+
+.social:hover {
+  transform: translateY(-6px);
+}
+
+.instagram {
+  background: linear-gradient(90deg, #ff9d29, #d62976);
+}
+
+.facebook {
+  background: linear-gradient(90deg, #4388f5, #244da8);
+}
+
+.tiktok {
+  background: #111;
+}
+
+.flower {
+  position: absolute;
+  font-size: 130px;
+  opacity: 0.55;
+}
+
+.flower-left {
+  left: -25px;
+  bottom: 20px;
+}
+
+.brush {
+  position: absolute;
+  right: 45px;
+  bottom: 40px;
+  font-size: 100px;
+  transform: rotate(-25deg);
+}
+
+@media (max-width: 600px) {
+  .follow-content h2 {
+    font-size: 36px;
+  }
+
+  .follow-content p {
+    font-size: 16px;
+  }
+
+  .social {
+    min-width: 240px;
+  }
+
+  .brush,
+  .flower {
+    opacity: 0.2;
+  }
+}
