@@ -207,12 +207,13 @@ flex-wrap: wrap;
   transform: translateY(-6px);
 }
 
-.btn.instagram {
-  background: #E1306C; /* Instagram pink */
-  padding: 12px 15px;
-  border-radius: 50%; /* gol button */
+/* Instagram - Gol Pink Button */
+.insta-btn {
+  background: #E1306C;
+  border: 2px solid black;
+  border-radius: 50%;
+  padding: 12px;
   font-size: 20px;
-  color: white;
 }
 
 /* Facebook - Blue Button */
