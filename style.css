@@ -215,12 +215,14 @@ flex-wrap: wrap;
   color: white;
 }
 
-.facebook {
-  background: linear-gradient(90deg, #4388f5, #244da8);
+/* Facebook - Blue Button */
+.fb-btn {
+  background: #1877F2;
 }
 
-.tiktok {
-  background: #111;
+/* TikTok - Black Button */
+.tt-btn {
+  background: #000000;
 }
 
 .flower {
